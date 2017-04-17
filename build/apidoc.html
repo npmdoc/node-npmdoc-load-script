@@ -1,0 +1,191 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/eldargab/load-script"
+
+    >load-script (v1.0.0)</a>
+</h1>
+<h4>Dynamic script loading for browser</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.load-script">module load-script</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.load-script.load-script">
+            function <span class="apidocSignatureSpan"></span>load-script
+            <span class="apidocSignatureSpan">(src, opts, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.load-script.toString">
+            function <span class="apidocSignatureSpan">load-script.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.load-script.toString">module load-script.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.load-script.toString.toString">
+            function <span class="apidocSignatureSpan">load-script.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.load-script" id="apidoc.module.load-script">module load-script</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.load-script.load-script" id="apidoc.element.load-script.load-script">
+        function <span class="apidocSignatureSpan"></span>load-script
+        <span class="apidocSignatureSpan">(src, opts, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function load(src, opts, cb) {
+  var head = document.head || document.getElementsByTagName(&#x27;head&#x27;)[0]
+  var script = document.createElement(&#x27;script&#x27;)
+
+  if (typeof opts === &#x27;function&#x27;) {
+    cb = opts
+    opts = {}
+  }
+
+  opts = opts || {}
+  cb = cb || function() {}
+
+  script.type = opts.type || &#x27;text/javascript&#x27;
+  script.charset = opts.charset || &#x27;utf8&#x27;;
+  script.async = &#x27;async&#x27; in opts ? !!opts.async : true
+  script.src = src
+
+  if (opts.attrs) {
+    setAttributes(script, opts.attrs)
+  }
+
+  if (opts.text) {
+    script.text = &#x27;&#x27; + opts.text
+  }
+
+  var onend = &#x27;onload&#x27; in script ? stdOnEnd : ieOnEnd
+  onend(script, cb)
+
+  // some good legacy browsers (firefox) fail the &#x27;in&#x27; detection above
+  // so as a fallback we always set onload
+  // old IE will ignore this and new IE will set onload
+  if (!script.onload) {
+    stdOnEnd(script, cb);
+  }
+
+  head.appendChild(script)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.load-script.toString" id="apidoc.element.load-script.toString">
+        function <span class="apidocSignatureSpan">load-script.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.load-script.toString" id="apidoc.module.load-script.toString">module load-script.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.load-script.toString.toString" id="apidoc.element.load-script.toString.toString">
+        function <span class="apidocSignatureSpan">load-script.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
