@@ -1,4 +1,7 @@
-# api documentation for  [load-script (v1.0.0)](https://github.com/eldargab/load-script)  [![npm package](https://img.shields.io/npm/v/npmdoc-load-script.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-load-script) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-load-script.svg)](https://travis-ci.org/npmdoc/node-npmdoc-load-script)
+# npmdoc-load-script
+
+#### basic api documentation for  [load-script (v1.0.0)](https://github.com/eldargab/load-script)  [![npm package](https://img.shields.io/npm/v/npmdoc-load-script.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-load-script) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-load-script.svg)](https://travis-ci.org/npmdoc/node-npmdoc-load-script)
+
 #### Dynamic script loading for browser
 
 [![NPM](https://nodei.co/npm/load-script.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/load-script)
@@ -57,7 +60,8 @@
         "test": "zuul -- test/index.js",
         "test-local": "zuul --local 9005 -- test/index.js"
     },
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "bin": {}
 }
 ```
 

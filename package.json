@@ -1,6 +1,6 @@
 {
     "author": "kai zhu <kaizhu256@gmail.com>",
-    "description": "api documentation for [load-script (v1.0.0)](https://github.com/eldargab/load-script) [![npm package](https://img.shields.io/npm/v/npmdoc-load-script.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-load-script) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-load-script.svg)](https://travis-ci.org/npmdoc/node-npmdoc-load-script)",
+    "description": "#### basic api documentation for  [load-script (v1.0.0)](https://github.com/eldargab/load-script)  [![npm package](https://img.shields.io/npm/v/npmdoc-load-script.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-load-script) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-load-script.svg)](https://travis-ci.org/npmdoc/node-npmdoc-load-script)",
     "devDependencies": {
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
         "load-script": "*",
